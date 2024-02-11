@@ -2,9 +2,9 @@ import React from "react";
 import "./Navbar.css";
 import amazon from "../../assets/amazon-logo.png";
 import { Link } from "react-router-dom";
+import { contextValue } from "../Context/StateProvider";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { contextValue } from "../Context/StateProvider";
 
 const Navbar = () => {
   const [{ cart }] = contextValue();
