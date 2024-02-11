@@ -41,7 +41,7 @@ const Login = () => {
 
     // If both email and password are valid, navigate to the main page
     if (isEmailValid && isPasswordValid) {
-      navigate("/");
+      navigate("/Amazon-clone/");
     }
   };
 

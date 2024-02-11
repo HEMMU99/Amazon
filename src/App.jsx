@@ -35,9 +35,9 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exac path="/checkout" element={<Checkout />} />
-            <Route exac path="/login" element={<Login />} />
+            <Route exact path="/Amazon-clone/" element={<Home />} />
+            <Route exac path="/Amazon-clone/checkout" element={<Checkout />} />
+            <Route exac path="/Amazon-clone/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
       )}
