@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
@@ -46,32 +46,48 @@ const Login = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="login">
+      <Link to="/Amazon-clone/">
+        <img
+          className="login-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+        />
+      </Link>
+
       <div className="login-container">
-        <h2>Sign in</h2>
+        <h1>Sign-in</h1>
+
         <form onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
-          </div>
-          <div>
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
-          </div>
-          <button type="submit">Login</button>
+          <h5>E-mail</h5>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+
+          <h5>Password</h5>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {passwordError && <p style={{ color: "red" }}>{passwordError}</p>}
+
+          <button type="submit" className="login-signInButton">
+            Sign In
+          </button>
         </form>
+
+        <p>
+          By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use &
+          Sale. Please see our Privacy Notice, our Cookies Notice and our
+          Interest-Based Ads Notice.
+        </p>
+
+        <button className="login-registerButton">
+          Create your Amazon Account
+        </button>
       </div>
     </div>
   );
