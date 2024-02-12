@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Checkout from "./Components/Checkout/Checkout";
@@ -35,9 +35,9 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route exact path="/Amazon-clone/" element={<Home />} />
-            <Route exac path="/Amazon-clone/checkout" element={<Checkout />} />
-            <Route exac path="/Amazon-clone/login" element={<Login />} />
+            <Route path="/Amazon-clone/" element={<Home />} />
+            <Route path="/Amazon-clone/checkout" element={<Checkout />} />
+            <Route path="/Amazon-clone/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
       )}
